@@ -8,6 +8,8 @@ x_NOISE_SIGMA = [pi*1e-4;
                  pi*1e-5];
 T = 50; % с
 dt = 1e-2;
+dt_ctrl = 5e-2;
 lyap_k1 = 5e-1*params.g/(params.l*sqrt(2));
 lyap_k2 = 2;
+u_MAX = 2*pi;
 u_NOISE_SIGMA = pi*1e-6;
