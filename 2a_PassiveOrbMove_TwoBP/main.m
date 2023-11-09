@@ -59,7 +59,7 @@ for i=5:6
 end
 
 subplot(2,4,[3 4 7 8])
-scatter3(x(1,:),x(2,:),x(3,:))
+plot3(x(1,:),x(2,:),x(3,:))
 grid on
 xlabel('x, km')
 ylabel('y, km')
@@ -69,9 +69,10 @@ title('Trajectory')
 sgtitle('Passive orbital move - 2 body problem, FI & Trajectory')
 
 function Fi = firstints(r,v,mu)
-    h = v'*v/2 - mu/norm(r);
+    nr = norm(r);
+    h = v'*v/2 - mu/nr;
     c = cross(r,v);
-    f = cross(v,c) - mu*r/norm(r);
+    f = cross(v,c) - mu*r/nr;
     [p1,p2,p3,p4,p5,~] = xyz2elem(r,v,mu);
     Fi = [h;c;f;p1;p2;p3;p4;p5];
 end

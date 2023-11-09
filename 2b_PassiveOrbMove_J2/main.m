@@ -40,7 +40,7 @@ for i=1:8
     title(tts(i))
 end
 
-sgtitle('Passive orbital move - 2 body problem, FI')
+sgtitle('Passive orbital move - J2, FI')
 
 figure('units','normalized','outerposition',[0 0 1 1]);
 for i=1:2
@@ -66,7 +66,7 @@ ylabel('y, km')
 zlabel('z, km')
 title('Trajectory')
 
-sgtitle('Passive orbital move - 2 body problem, FI & Trajectory')
+sgtitle('Passive orbital move - J2, FI & Trajectory')
 
 function Fi = firstints(r,v,mu,d)
     nr = norm(r);
